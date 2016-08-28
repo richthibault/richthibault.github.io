@@ -1,10 +1,12 @@
 ---
 layout: post
-title: Hello world!
+title: Hello, whirled.
 ---
 
-It's never too late to start blogging - is it?  OK, let's get started.
+BREAKING NEWS - Web developer takes 20 years to get around to making his own website.  Film at 11.
 
-Here's the obligatory:
+Never too late right?  I'll use this space mostly to talk about web development, especially Java and Spring.
+
+Oh, and here's the obligatory:
 
 `HELLO WORLD`
