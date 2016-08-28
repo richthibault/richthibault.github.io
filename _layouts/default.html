@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="icon" href="{{ site.avatar }}" type="image/x-icon" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -33,7 +34,7 @@
         </header>
       </div>
     </div>
-
+    
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
@@ -41,6 +42,9 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
+          <div style="margin:10px">
+          <a href="http://www.linkthrow.com" target="_blank">LinkThrow.com</a> is now live!
+          </div>
           {% include svg-icons.html %}
         </footer>
       </div>
