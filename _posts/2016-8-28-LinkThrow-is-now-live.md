@@ -1,6 +1,10 @@
 ---
 layout: post
 title: LinkThrow is Now Live!
+tags:
+ - LinkThrow
+ - MongoDB
+ - Chrome
 ---
 
 I often find myself reading some long web page on my Mac, and wishing I had an easy way to
