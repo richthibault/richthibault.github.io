@@ -25,6 +25,6 @@ It's pretty straightforward:
 
 ### What I learned
 
-This was also a learning exercise for me.  I hadn't had much opportunity to play around with MongoDB, so I'm using that for the back end.  Spring Data made it very simple to integrate with the app.  I did find Mongo's security a bit confusing - I somehow ended locking myself out of my own database!  I finally decided to leave "auth" disabled and just limit access using Amazon's VPC permissions.  Easy enough to just tunnel in if I need to.
+This was also a learning exercise for me.  I hadn't had much opportunity to play around with MongoDB, so I'm using that for the back end.  Spring Data made it very simple to integrate with the app.  I did find Mongo's security a bit confusing - I somehow ended locking myself out of my own database!  I finally decided to leave "auth" disabled and just block outside access at the network level, using Amazon's VPC permissions.  Easy enough to just tunnel in if I need to.
 
 I also had never done a Chrome extension before, so that was a first.  It's basically just a block of HTML with some Javascript to handle the Ajax calls.  What's nice is once I add my iPhone on one Mac, I can throw to it from all my Macs, since extensions are tied to your Google account and shared across all devices.
