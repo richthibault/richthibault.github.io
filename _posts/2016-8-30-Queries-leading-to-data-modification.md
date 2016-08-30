@@ -10,12 +10,12 @@ tags:
 Man, this one had me pulling my hair out.  I was doing something I generally try to avoid - calling a stored procedure in MySQL from a Spring/Hibernate JPA app.  Something like this:
 
 {% highlight java %}
-		StoredProcedureQuery storedProcedure = em.createStoredProcedureQuery("getSomeData");
-		storedProcedure.registerStoredProcedureParameter("myId", Integer.class, ParameterMode.IN);
+StoredProcedureQuery storedProcedure = em.createStoredProcedureQuery("getSomeData");
+storedProcedure.registerStoredProcedureParameter("myId", Integer.class, ParameterMode.IN);
 
-		storedProcedure.setParameter("in_id", myObj.getId());
-		storedProcedure.execute();
-		List<Object[]> rows = (List<Object[]>) storedProcedure.getResultList();
+storedProcedure.setParameter("in_id", myObj.getId());
+storedProcedure.execute();
+List<Object[]> rows = (List<Object[]>) storedProcedure.getResultList();
 {% endhighlight %}
 
 It gets some structured data from the database, and loads it into a list for further processing.  So far so good, and it worked fine for several months.  Until I tried to add a new feature the other day, calling this proc from within another transaction, and started getting this error:
