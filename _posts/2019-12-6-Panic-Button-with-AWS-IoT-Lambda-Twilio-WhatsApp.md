@@ -9,7 +9,7 @@ tags:
  - WhatsApp
 ---
 
-A family member has been having some health issues lately, so I thought it might be helpful for her to have sort of a "panic button" she can press if she's feeling ill and needs help.  The button would need to be simple to use, and should send a message to nearby relatives so they can run and assist.  I also wanted it to use WhatsApp, since her family uses that more than SMS.
+A family member has been having some health issues lately, so I thought it might be helpful for her to have sort of a "panic button" she can press if she's feeling ill and needs help.  The button would need to be simple to use, and should send a message to nearby relatives so they can run and assist.  I also wanted it to use WhatsApp, since she lives in Colombia, where WhatsApp is more popular than SMS.
 
 So first I would need a button.  I looked at some Raspberry Pi solutions, but those seemed overly complicated.  Then I stumbled across the AWS IoT Enterprise button:
 
@@ -36,7 +36,7 @@ While you’re waiting for it to arrive, be sure to have an AWS account ready to
 
 https://aws.amazon.com
 
-You’ll want to go ahead and put in your credit card in the billing section (My Account - Payment Methods).  This may seem unnecessary given that AWS Lambda gives us 1 million free requests per month, which is about 999,999 more than I need.  But I couldn’t get the button to activate until I set up a credit card in my account.
+You’ll want to go ahead and put in your credit card in the billing section (My Account - Payment Methods).  This may seem unnecessary given that AWS Lambda gives us 1 million free requests per month, which is about 999,999 more than I need.  But I couldn’t get the button to activate until I set up a credit card in my account.  (AWS does charge a minimal fee for having an active, connected IoT button.)
 
 Once the button shows up on your doorstep, then you can register it here:
 
@@ -44,7 +44,7 @@ https://aws.amazon.com/iot-1-click/
 
 Click “Get Started with AWS IoT 1-Click” to begin. The following page will have links to install the "AWS IoT 1-Click” app, so install that first on your iOS or Android device.  From there, follow the instructions in the app to get the device onto your Wifi network.
 
-Then go back to the AWS Console and click “Claim Devices.” I couldn’t find a device ID on the device itself, but checking the Order Details page on Amazon, I found a Serial Number.  It’s 16 characters and probably starts with G030.  I copied and pasted that in as the claim code, clicked “Claim,” and then the button was tied to my AWS account.  So far so good.
+Then go back to the AWS Console and click “Claim Devices.” I couldn’t find a device ID on the device itself, but checking the Order Details page on Amazon, I found a Serial Number.  It’s 16 characters and starts with G030.  I copied and pasted that in as the claim code, clicked “Claim,” and then the button was tied to my AWS account.  So far so good.
 
 If you only want to send an SMS, you are almost done - create a project from the IoT 1-Click page, and give it a name and description.  Then click “Start” under Device Templates.  Click “All button types,” enter a Device Template Name, and choose Send SMS.  Enter your phone number and the SMS text, then Create Project.  (You can also choose to Send Email if you prefer.)  Then click “Create Placements,” enter a Placement Name, and select your registered device. Click “Create Replacement” and you should be all set.
 
@@ -122,7 +122,7 @@ Your {} code is {}
 
 It won’t win any Nobel prizes for literature, but I should be able to get the point across with this message:
 
-Your health code is SENDHELP
+Your *health* code is *SENDHELP*
 
 Using a text string that doesn’t follow the template will result in a message send failure.
 
@@ -186,9 +186,39 @@ public class PanicButtonRequestHandlerTest {
 
 Hopefully you just got a WhatsApp message on your phone!  If not, hopefully you got a helpful error message.  You probably just need to make sure you have your sandbox and phone set up properly in the Twilio console, and that the phone numbers are correct and formatted properly.
 
-Once we’re sure it’s working, we can iterate a bit to improve things.  I moved all the variables into environment variables, so I can make the code reusable - no worries, we can use all the environment vars we want when we post this to AWS Lambda.  I also wanted to allow multiple to phones, so I set them as a comma-delimited list in the environment, then parse them into an array, and loop over each phone:
+Once we’re sure it’s working, we can iterate a bit to improve things.  I moved all the variables into environment variables, so I can make the code reusable - no worries, we can use all the environment vars we want when we post this to AWS Lambda.  For purposes of unit testing, I clicked Debug - Debug Configurations in Eclipse, then entered all my environment vars on the Environment tab for my unit test.
 
 {% highlight java %}
+	private static final String TWILIO_SID_VAR = "TWILIO_SID";
+	private static final String TWILIO_AUTH_TOKEN_VAR = "TWILIO_AUTH_TOKEN";
+
+	private static final String PANIC_BUTTON_FROM_VAR = "PANIC_BUTTON_FROM";
+	private static final String PANIC_BUTTON_TO_VAR = "PANIC_BUTTON_TO";
+	private static final String PANIC_BUTTON_MSG_VAR = "PANIC_BUTTON_MSG";
+
+    public Void handleRequest(IoTButtonEvent event, Context context) {
+    	
+    	String twilioSid = System.getenv(TWILIO_SID_VAR);
+    	String authToken = System.getenv(TWILIO_AUTH_TOKEN_VAR);
+    	
+    	if(null==twilioSid || null==authToken)
+    		throw new RuntimeException(String.format("No Twilio credentials found, set environment variables for %s and %s.", TWILIO_SID_VAR, TWILIO_AUTH_TOKEN_VAR));
+
+    	String fromPhone = System.getenv(PANIC_BUTTON_FROM_VAR);
+    	String toPhone = System.getenv(PANIC_BUTTON_TO_VAR);
+    	String msg = System.getenv(PANIC_BUTTON_MSG_VAR);
+    	
+    	if(null==fromPhone || null==toPhone || null==msg)
+    		throw new RuntimeException(String.format("No phone numbers found, set environment variables for %s, %s, and %s.", PANIC_BUTTON_FROM_VAR, PANIC_BUTTON_TO_VAR, PANIC_BUTTON_MSG_VAR));
+
+        Twilio.init(twilioSid, authToken);
+	   ....
+{% endhighlight %}
+
+I also wanted to allow multiple "to" phones, so I set them as a comma-delimited list in the environment, then parse them into an array, and loop over each phone:
+
+{% highlight java %}
+        PhoneNumber from = new PhoneNumber(fromPhone);
         String toPhone = System.getenv(PANIC_BUTTON_TO_VAR);
         List<String> toPhones = Arrays.asList(toPhone.split("\\s*,\\s*"));
         
