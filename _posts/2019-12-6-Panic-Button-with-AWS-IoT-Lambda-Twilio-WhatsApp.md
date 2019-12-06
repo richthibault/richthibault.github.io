@@ -189,12 +189,12 @@ Hopefully you just got a WhatsApp message on your phone!  If not, hopefully you 
 Once we’re sure it’s working, we can iterate a bit to improve things.  I moved all the variables into environment variables, so I can make the code reusable - no worries, we can use all the environment vars we want when we post this to AWS Lambda.  For purposes of unit testing, I clicked Debug - Debug Configurations in Eclipse, then entered all my environment vars on the Environment tab for my unit test.
 
 {% highlight java %}
-	private static final String TWILIO_SID_VAR = "TWILIO_SID";
-	private static final String TWILIO_AUTH_TOKEN_VAR = "TWILIO_AUTH_TOKEN";
+    private static final String TWILIO_SID_VAR = "TWILIO_SID";
+    private static final String TWILIO_AUTH_TOKEN_VAR = "TWILIO_AUTH_TOKEN";
 
-	private static final String PANIC_BUTTON_FROM_VAR = "PANIC_BUTTON_FROM";
-	private static final String PANIC_BUTTON_TO_VAR = "PANIC_BUTTON_TO";
-	private static final String PANIC_BUTTON_MSG_VAR = "PANIC_BUTTON_MSG";
+    private static final String PANIC_BUTTON_FROM_VAR = "PANIC_BUTTON_FROM";
+    private static final String PANIC_BUTTON_TO_VAR = "PANIC_BUTTON_TO";
+    private static final String PANIC_BUTTON_MSG_VAR = "PANIC_BUTTON_MSG";
 
     public Void handleRequest(IoTButtonEvent event, Context context) {
     	
@@ -212,7 +212,7 @@ Once we’re sure it’s working, we can iterate a bit to improve things.  I mov
     		throw new RuntimeException(String.format("No phone numbers found, set environment variables for %s, %s, and %s.", PANIC_BUTTON_FROM_VAR, PANIC_BUTTON_TO_VAR, PANIC_BUTTON_MSG_VAR));
 
         Twilio.init(twilioSid, authToken);
-	   ....
+        ....
 {% endhighlight %}
 
 I also wanted to allow multiple "to" phones, so I set them as a comma-delimited list in the environment, then parse them into an array, and loop over each phone:
