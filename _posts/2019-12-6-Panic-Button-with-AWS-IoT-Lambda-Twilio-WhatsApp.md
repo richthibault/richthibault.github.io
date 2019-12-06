@@ -26,7 +26,7 @@ So here’s what we need to build the solution:
 
 Important Note: The IoT Enterprise button requires Wifi to function - so this won’t be a portable panic button, it will be mounted in the house.  AT&T offers an LTE button (https://marketplace.att.com/products/att-iot-button-sercomm-332372) that works on the cellular network, if portability is what you need.
 
-== Purchasing and Setting Up AWS IoT
+## Purchasing and Setting Up AWS IoT
 
 The easy part is buying the button - just go to:
 
@@ -50,7 +50,7 @@ If you only want to send an SMS, you are almost done - create a project from the
 
 If you want to send a WhatsApp message like I did, read on.
 
-== Setting Up Twilio
+## Setting Up Twilio
 
 Twilio provides an API for Internet-based telephony services, so it’s a great way of sending SMS or WhatsApp messages from a Java application.  Sign up for a developer account here:
 
@@ -64,7 +64,7 @@ If you’re doing a project that will involve more volume, you can request a pro
 
 Now that we’re all set up, let’s do some coding.
 
-== Developing the Lambda Function in Java
+## Developing the Lambda Function in Java
 
 I use Maven for dependencies, so I create a new Maven project in Eclipse.  We’ll need the Twilio API and AWS Lambda as dependencies, so the dependencies in our pom.xml will look like this:
 
@@ -233,7 +233,7 @@ Finally, we will need to create a jar for uploading to AWS Lambda.  My initial L
 
 Now we can do “mvn package” and get the jar we want to upload to AWS. 
 
-== Setting Up AWS Lambda
+## Setting Up AWS Lambda
 
 Log into the AWS console and go to the Lambda section, then click “Create Function.”  Choose to Author from Scratch, and select Java 8 or Java 11 for Runtime and click “Create Function.”  Upload your jar file, and enter the Handler, which should be something like:
 
@@ -247,10 +247,10 @@ Go back to the IoT 1-Click section of the AWS Console, and under Manage - Projec
 
 If it doesn’t work, let’s go to the logs.  Under the Lambda section, edit your lambda and go to the Monitoring section.  Click “View logs in Cloudwatch” to see any exceptions or other logged messages, and fix as necessary.
 
-== Update 1
+## Update 1
 
 I landed in Colombia, all set to install my nifty new button.  I figured all I need to do is fire up the IoT 1-Click app, tap Wifi Configuration, and get the device connected to the local Wifi network.  Wrong!  The app detected I was in Colombia, and threw an error: “This device is not supported in your location.”  Argh!  I wasn’t about to let this roadblock stop me though.  I borrowed another family member’s Android phone, and searched for the IoT 1-Click app in the Google Play store, and of course it’s not available in Colombia at all.  So I found a website with the IoT 1-Click APK file, downloaded and installed it, authenticated on AWS, claimed the device again, and connected to the Wifi.  All set!
 
-== Update 2
+## Update 2
 
 I finally got a bill for $.13 from AWS, for a partial month of having an active IoT button.  Next month the bill should be $.25.  Pretty good deal!
