@@ -155,7 +155,7 @@ public class PanicButtonRequestHandler implements RequestHandler<IoTButtonEvent,
             
         Integer errorCode = message.getErrorCode();
         if(null!=errorCode)
-        System.out.println(String.format("Got Twilio error %d, %s.", errorCode, message.getErrorMessage()));
+            System.out.println(String.format("Got Twilio error %d, %s.", errorCode, message.getErrorMessage()));
         
         return null;
 
@@ -239,7 +239,7 @@ Log into the AWS console and go to the Lambda section, then click “Create Func
 
 com.yourpackage.PanicButtonRequestHandler::handleRequest
 
-[<img src="{{ site.baseurl }}/images/lambda-setup.png" alt="AWS Lambda Setup" style="width: 800px; height:391px;"/>]
+<img src="{{ site.baseurl }}/images/lambda-setup.png" alt="AWS Lambda Setup" style="width: 800px; height:391px;"/>
 
 You can also enter all your environment variables, if using them. Click “Save” when done.  
 
@@ -247,9 +247,11 @@ Go back to the IoT 1-Click section of the AWS Console, and under Manage - Projec
 
 If it doesn’t work, let’s go to the logs.  Under the Lambda section, edit your lambda and go to the Monitoring section.  Click “View logs in Cloudwatch” to see any exceptions or other logged messages, and fix as necessary.
 
+Hopefully you find this example helpful.  If you create a button of your own, hit me up in the comments and let me know how it goes.
+
 ## Update 1
 
-I landed in Colombia, all set to install my nifty new button.  I figured all I need to do is fire up the IoT 1-Click app, tap Wifi Configuration, and get the device connected to the local Wifi network.  Wrong!  The app detected I was in Colombia, and threw an error: “This device is not supported in your location.”  Argh!  I wasn’t about to let this roadblock stop me though.  I borrowed another family member’s Android phone, and searched for the IoT 1-Click app in the Google Play store, and of course it’s not available in Colombia at all.  So I found a website with the IoT 1-Click APK file, downloaded and installed it, authenticated on AWS, claimed the device again, and connected to the Wifi.  All set!
+I landed in Colombia, all set to install my nifty new button.  I figured all I need to do is fire up the IoT 1-Click app, tap Wifi Configuration, and get the device connected to the local Wifi network.  Wrong!  The app detected I was in Colombia, and threw an error: “This device is not supported in your location.”  Argh!  Panic!  I wasn’t about to let this roadblock stop me though.  I borrowed another family member’s Android phone, and searched for the IoT 1-Click app in the Google Play store - but of course it’s not available in Colombia.  So I found a website with the IoT 1-Click APK file, downloaded and installed it, authenticated on AWS, claimed the device again, and connected to the Wifi.  All set!
 
 ## Update 2
 
