@@ -24,7 +24,7 @@ So here’s what we need to build the solution:
 * Twilio API for Java
 * Amazon Web Services account for AWS Lambda
 
-Important Note: The IoT Enterprise button requires Wifi to function - so this won’t be a portable panic button, it will be mounted in the house.  AT&T offers an LTE button (https://marketplace.att.com/products/att-iot-button-sercomm-332372) that works on the cellular network, if portability is what you need.
+**Important Note:** The IoT Enterprise button requires Wifi to function - so this won’t be a portable panic button, it will be mounted in the house.  AT&T offers an LTE button (https://marketplace.att.com/products/att-iot-button-sercomm-332372) that works on the cellular network, if portability is what you need.
 
 ## Purchasing and Setting Up AWS IoT
 
@@ -36,7 +36,7 @@ While you’re waiting for it to arrive, be sure to have an AWS account ready to
 
 https://aws.amazon.com
 
-You’ll want to go ahead and put in your credit card in the billing section (My Account - Payment Methods).  This may seem unnecessary given that AWS Lambda gives us 1 million free requests per month, which is about 999,990 more than I need.  But I couldn’t get the button to activate until I set up a credit card in my account.
+You’ll want to go ahead and put in your credit card in the billing section (My Account - Payment Methods).  This may seem unnecessary given that AWS Lambda gives us 1 million free requests per month, which is about 999,999 more than I need.  But I couldn’t get the button to activate until I set up a credit card in my account.
 
 Once the button shows up on your doorstep, then you can register it here:
 
