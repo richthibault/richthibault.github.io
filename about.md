@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Rich.  I've been in software development some 25 years, mostly building business
+Hi, I'm Rich.  I've been in software development some 33 years, mostly building business
 systems and e-commerce sites.  I do full-stack development, from database design to API
 to front-end layout.  I work mostly in Java/Spring these days, though I still
 do the occasional iOS or Android mobile app.
