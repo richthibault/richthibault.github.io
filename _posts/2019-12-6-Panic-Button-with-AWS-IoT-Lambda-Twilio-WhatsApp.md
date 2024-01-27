@@ -9,6 +9,8 @@ tags:
  - WhatsApp
 ---
 
+(NOTE: This article is few years old now, and many of the links no longer work!)
+
 A family member has been having some health issues lately, so I thought it might be helpful for her to have sort of a "panic button" she can press if she's feeling ill and needs help.  The button would need to be simple to use, and should send a message to nearby relatives so they can run and assist.  I also wanted it to use WhatsApp, since she lives in Colombia, where WhatsApp is more popular than SMS.
 
 So first I would need a button.  I looked at some Raspberry Pi solutions, but those seemed overly complicated.  Then I stumbled across the AWS IoT Enterprise button:
