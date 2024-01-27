@@ -13,20 +13,17 @@
 /* BASE RULES */
 /**************/
 
-html {
-  font-size: 100%;
-}
-
-body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+html, body {
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  color: #333;
 }
 
 .container {
   margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -224,16 +221,18 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin: 10px 20px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
       color: $blue;
     }
+  }
+  a:hover {
+    font-weight: bold;
   }
 }
 
