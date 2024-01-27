@@ -13,7 +13,7 @@ A family member has been having some health issues lately, so I thought it might
 
 So first I would need a button.  I looked at some Raspberry Pi solutions, but those seemed overly complicated.  Then I stumbled across the AWS IoT Enterprise button:
 
-https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG
+<a href="https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG" target="_blank">https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG</a>
 
 This seemed like a great solution - an easy-to-use button, small and portable, and I could write the supporting code in Java, deploying to AWS Lambda to handle the button clicks.  And at only 20 bucks, it’s affordable as well.
 
