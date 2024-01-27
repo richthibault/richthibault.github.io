@@ -59,20 +59,18 @@ table {
 /**************/
 /* BASE RULES */
 /**************/
-html {
-  font-size: 100%;
-}
 
-body {
+html, body {
   background: #fff;
-  font: 18px/1.4 Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
   color: #333;
 }
 
 .container {
   margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -266,15 +264,17 @@ nav {
   }
 }
 nav a {
-  margin-left: 20px;
+  margin: 10px 20px;
   color: #333;
   text-align: right;
   font-weight: 300;
   letter-spacing: 1px;
 }
+nav a:hover {
+  font-weight: bold;
+}
 @media screen and (max-width: 640px) {
   nav a {
-    margin: 0 10px;
     color: #4183C4;
   }
 }
