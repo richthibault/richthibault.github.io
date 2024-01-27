@@ -32,17 +32,17 @@ So here’s what we need to build the solution:
 
 The easy part is buying the button - just go to:
 
-https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG
+<a href="https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG" target="_blank">https://www.amazon.com/All-New-AWS-IoT-Enterprise-Button/dp/B075FPHHGG</a>
 
 While you’re waiting for it to arrive, be sure to have an AWS account ready to go:
 
-https://aws.amazon.com
+<a href="https://aws.amazon.com" target="_blank">https://aws.amazon.com</a>
 
 You’ll want to go ahead and put in your credit card in the billing section (My Account - Payment Methods).  This may seem unnecessary given that AWS Lambda gives us 1 million free requests per month, which is about 999,999 more than I need.  But I couldn’t get the button to activate until I set up a credit card in my account.  (AWS does charge a minimal fee for having an active, connected IoT button.)
 
 Once the button shows up on your doorstep, then you can register it here:
 
-https://aws.amazon.com/iot-1-click/
+<a href="https://aws.amazon.com/iot-1-click/" target="_blank">https://aws.amazon.com/iot-1-click/</a>
 
 Click “Get Started with AWS IoT 1-Click” to begin. The following page will have links to install the "AWS IoT 1-Click” app, so install that first on your iOS or Android device.  From there, follow the instructions in the app to get the device onto your Wifi network.
 
@@ -56,7 +56,7 @@ If you want to send a WhatsApp message like I did, read on.
 
 Twilio provides an API for Internet-based telephony services, so it’s a great way of sending SMS or WhatsApp messages from a Java application.  Sign up for a developer account here:
 
-https://www.twilio.com/
+<a href="https://www.twilio.com/" target="_blank">https://www.twilio.com/</a>
 
 I find just having a trial developer account works great for the purposes of this app, which is very low traffic (user base of 1!).  Sign up for a free trial account, then access the Programmable SMS service in the Twilio console.  Generate your API credentials, Account SID and Auth Token - you will need these later.
 
@@ -236,7 +236,7 @@ I also wanted to allow multiple "to" phones, so I set them as a comma-delimited 
 
 For the full source code, see my Github page:
 
-https://github.com/richthibault/panicbutton
+<a href="https://github.com/richthibault/panicbutton" target="_blank">https://github.com/richthibault/panicbutton</a>
 
 Finally, we will need to create a jar for uploading to AWS Lambda.  My initial Lambda attempts failed due to missing classes - so we need to make sure we can generate a jar that includes the Twilio dependencies.  Add this to pom.xml:
 
