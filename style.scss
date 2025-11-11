@@ -204,8 +204,8 @@ img {
 }
 
 .site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
+  margin: 10px;
+  color: $darkGray;
   font-size: 16px;
 
   @include mobile {
