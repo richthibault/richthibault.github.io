@@ -11,9 +11,7 @@ description: Java, Spring, and AI Developer
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/211542?v=3&s=460
 
-remote_theme: jekyll/minima
-minima:
-  skin: dark
+theme: jekyll-theme-midnight
 
 #
 # Flags below are optional
