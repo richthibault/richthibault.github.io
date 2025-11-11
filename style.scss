@@ -13,11 +13,17 @@
 /* BASE RULES */
 /**************/
 
+:root {
+    --bg-color: #1a1a1a; /* Dark background */
+    --text-color: #f0f0f0; /* Light text */
+    --accent-color: #87ceeb; /* Lighter accent */
+}
+
 html, body {
-  background: #fff;
+  background: var(--bg-color);
   font-family: $georgia; /*Helvetica, Arial, sans-serif;*/
   font-size: 14pt;
-  color: #333;
+  color: var(--text-color);
 }
 
 .container {
@@ -29,7 +35,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: var(--text-color);
   font-weight: bold;
 
   line-height: 1.2;
@@ -66,7 +72,7 @@ p {
 }
 
 a {
-  color: $blue;
+  color: var(--accent-color);
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
