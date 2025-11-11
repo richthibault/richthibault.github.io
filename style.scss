@@ -5,7 +5,7 @@
 // IMPORTS
 //
 
-@import "reset";
+// @import "reset";
 @import "{{ site.theme }}";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
@@ -205,7 +205,7 @@ img {
 }
 
 .site-description {
-  margin: 10px 0;
+  margin: 5px 0;
 //   color: $darkGray;
   font-size: 16px;
 
@@ -238,9 +238,9 @@ nav {
       color: $blue;
     }
   }
-  a:hover {
-    font-weight: bold;
-  }
+//   a:hover {
+//     font-weight: bold;
+//   }
 }
 
 //
