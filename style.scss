@@ -13,18 +13,18 @@
 /* BASE RULES */
 /**************/
 
-:root {
+/*:root {
     --bg-color: #1a1a1a; /* Dark background */
     --text-color: #f0f0f0; /* Light text */
     --accent-color: #87ceeb; /* Lighter accent */
-}
+}*/
 
-html, body {
+/*html, body {
   background: var(--bg-color);
-  font-family: $georgia; /*Helvetica, Arial, sans-serif;*/
+  font-family: $georgia;
   font-size: 14pt;
   color: var(--text-color);
-}
+}*/
 
 .container {
   margin: 0 auto;
@@ -32,7 +32,7 @@ html, body {
   padding: 0 20px;
   width: 100%;
 }
-
+/*
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: var(--text-color);
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   @include mobile {
     line-height: 1.4;
   }
-}
+}*/
 
 h1 {
   font-size: 30px;
@@ -71,14 +71,14 @@ p {
   margin: 15px 0;
 }
 
-a {
+/*a {
   color: var(--accent-color);
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
-}
+}*/
 
 ul, ol {
   margin: 15px 0;
