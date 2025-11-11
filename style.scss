@@ -10,8 +10,6 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
-style.scss backup!
-
 /**************/
 /* BASE RULES */
 /**************/
@@ -67,7 +65,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+//   color: $gray;
 }
 
 p {
@@ -123,7 +121,7 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+//   color: $gray;
 }
 
 // Specify the color of the selection
@@ -198,9 +196,9 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+//   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+//   font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -208,7 +206,7 @@ img {
 
 .site-description {
   margin: 10px 0;
-  color: $darkGray;
+//   color: $darkGray;
   font-size: 16px;
 
   @include mobile {
@@ -219,7 +217,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+//   font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
@@ -231,7 +229,7 @@ nav {
 
   a {
     margin: 10px 20px;
-    color: $darkGray;
+    // color: $darkGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
