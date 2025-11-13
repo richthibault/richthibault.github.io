@@ -2,13 +2,13 @@
 layout: post
 title: Demo: Spring Meets AI
 tags:
- - Articial Intelligence
+ - Artificial Intelligence
  - Spring
 ---
 
-Wow, 6 years since my last presentation! 
+A big thank you to everyone who came out to the Orlando Java Users Group tonight. Wow, 6 years since my last presentation! 
 
-Thanks to everyone who came out to the Orlando Java Users Group tonight. The topic was "Spring Meets AI: A Java developer’s guide to LLMs." Hopefully everyone found it useful - I definitely apprecated all the great questions!
+The topic tonight was "Spring Meets AI: A Java developer’s guide to LLMs." Hopefully everyone found it useful - I definitely apprecated all the great questions!
 
 <img src="{{ site.baseurl }}/images/SpringAI.png" alt="Spring Meets AI" style="max-width: 800px;"/>
 
