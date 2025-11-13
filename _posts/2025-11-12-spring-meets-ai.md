@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Demo: Spring Meets AI
+title: OJUG Demo - Spring Meets AI
 tags:
  - Artificial Intelligence
  - Spring
