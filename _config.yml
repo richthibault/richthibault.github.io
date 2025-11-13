@@ -26,10 +26,10 @@ footer-links:
   flickr:
   github: richthibault
   instagram:
-  linkedin:
+  linkedin: richard-thibault-684b97
   pinterest:
   rss: richthbault # just type anything here for a working RSS icon
-  twitter: gringomofo
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -80,7 +80,7 @@ sass:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-remote-theme
+#  - jekyll-remote-theme
 
 # Exclude these files from your production _site
 exclude:
