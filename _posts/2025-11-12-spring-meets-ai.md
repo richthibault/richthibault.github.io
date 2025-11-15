@@ -6,13 +6,13 @@ tags:
  - Spring
 ---
 
-<img src="{{ site.baseurl }}/images/SpringAIDemo.png" alt="Spring Meets AI" style="max-width: 800px;"/>
+<img src="{{ site.baseurl }}/images/SpringAI.png" alt="Spring Meets AI" style="max-width: 800px;"/>
 
 A big thank you to everyone who came out to the Orlando Java Users Group tonight. Wow, 6 years since my last presentation! 
 
 The topic tonight was "Spring Meets AI: A Java developer’s guide to LLMs." Hopefully everyone found it useful - I definitely apprecated all the great questions!
 
-<img src="{{ site.baseurl }}/images/SpringAI.png" alt="Spring Meets AI" style="max-width: 800px;"/>
+<img src="{{ site.baseurl }}/images/SpringAIDemo.png" alt="Rich at Spring Meets AI" style="max-width: 800px;"/>
 
 If you'd like to review the slides, they can be found here:
 
