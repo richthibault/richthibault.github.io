@@ -4,15 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Rich.  I've been in software development some 33 years, mostly building business
-systems and e-commerce sites.  I do full-stack development, from database design to API
-to front-end layout.  I work mostly in Java/Spring these days, though I still
-do the occasional iOS or Android mobile app.
+Hello! I am a full-stack developer creating enterprise applications that boost innovation and growth. I specialize in Java, Spring, and AI-driven integrations to build elegant, scalable, and modern solutions.
 
-I've worked in many vertical markets, from real estate to e-learning to travel to construction.
+My skills include software design and development, database design, and mobile app development for both iOS and Android. I also design and build RESTful APIs, and have experience with cloud platforms like AWS and Azure. Additionally, I design and build front ends using Thymeleaf, HTML, Javascript, and CSS.
 
-I've also visited many horizontal markets, like Publix, and the night market in Chiang Mai, Thailand.
+I'm the president and founder of <a href="https://www.exquisiteloop.com" target="_blank">Exquisite Loop, LLC</a>, an Orlando-based consulting firm.
 
 ### Contact me
 
-You can email me at rich dot thibault at g mail.
+To get in touch, please fill out <a href="https://www.exquisiteloop.com/contact" target="_blank">this contact form</a>.
